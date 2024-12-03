@@ -5181,8 +5181,8 @@ input[type="button"].btn-block {
 }
 
 .card-img-top {
-  width: 600px;
-  height: 300px;
+  max-width: 600px;
+  max-height: 300px;
   object-fit: cover;
   border-top-left-radius: calc(0 - 1px);
   border-top-right-radius: calc(0 - 1px);
