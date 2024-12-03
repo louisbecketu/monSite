@@ -50,14 +50,14 @@
 
 .left-text {
   flex: 1;
-  text-align: left;
+  text-align: justify;
   margin-top: 2%;
   margin-right: 3%;
 }
 
 .right-text {
   flex: 1;
-  text-align: right;
+  text-align: justify;
   margin-left: 3%;
   margin-top: 2%;
 }
@@ -11628,6 +11628,12 @@ pre .code {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 100px;
+}
+
+.carousel-subtitle{
+  color: #b9bbbe;
+  font-size: calc(20px + (30 - 20) * ((50vw - 150px) / (650 - 150)));
+  font-style: italic;
 }
 
 .header .carousel .carousel-inner .carousel-title {
