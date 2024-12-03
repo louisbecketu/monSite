@@ -584,6 +584,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  text-align: center;
 }
 
 @media (min-width: 576px) {
@@ -5181,6 +5182,8 @@ input[type="button"].btn-block {
 }
 
 .card-img-top {
+  display: block;
+  margin: 0 auto;
   object-fit: cover;
   border-top-left-radius: calc(0 - 1px);
   border-top-right-radius: calc(0 - 1px);
