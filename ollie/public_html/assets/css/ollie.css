@@ -665,9 +665,76 @@ pre code {
   max-width: 100%;
 }
 
-.projets-item {
+.projets-img-container {
+  width: 100%; /* S'adapte à la largeur du conteneur parent */
+  height: 200px; /* Fixe une hauteur uniforme pour toutes les images */
+  overflow: hidden; /* Masque tout dépassement éventuel */
   position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4; /* Optionnel : fond visible si l'image n'occupe pas tout */
+}
+
+.projets-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Assure que tout prend la même hauteur */
+  border: 1px solid #ccc; /* Optionnel : pour le style */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.projets-img {
+  width: 100%; /* Prend toute la largeur disponible */
+  height: 100%; /* S'adapte à la hauteur disponible */
+  object-fit: contain; /* L'image reste entièrement visible */
+  display: block;
+  background-color: transparent; /* Optionnel : éviter tout fond indésirable */
+}
+
+.projets-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0; /* Caché par défaut */
+  transform: translateY(100%); /* Position en dehors de la vue */
+  transition: all 0.3s ease-in-out;
+}
+
+.projets-img-container:hover .projets-overlay {
+  opacity: 1; /* Rendre visible */
+  transform: translateY(0); /* Amener à la position normale */
+}
+
+.projets-text {
+  color: #fff;
+  font-size: calc(0.6rem + 0.5vw); /* Ajuste la taille selon l'écran */
+  line-height: 1.4; /* Améliore la lisibilité */
+  overflow-y: auto; /* Permet de défiler si le texte dépasse */
+  max-height: 100%; /* Évite que le texte dépasse l'image */
+}
+
+.projets-btn {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.projets-link .btn {
+  display: inline-block;
+  width: 100%; /* Pour un bouton bien aligné */
+  font-size: 1rem;
+  padding: 10px 20px;
 }
 
 .voir-plus {
@@ -683,29 +750,8 @@ pre code {
   background-color: #23527c;
 }
 
-.projets-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.projets-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 20px;
-  transform: translateY(100%);
-  transition: transform 0.5s ease-in-out;
-}
-
-.projets-btn {
-  width: 100%;
-  padding: 20px;
-  text-align: center;
+.projets-item:hover .projets-btn {
+  bottom: 20px;
 }
 
 .projets-item:hover .projets-overlay {
@@ -716,12 +762,6 @@ pre code {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-}
-
-.projets-text {
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: #fff;
 }
 
 .projets-link {
@@ -1000,6 +1040,19 @@ pre code {
             flex-grow: 1;
     max-width: 100%;
   }
+
+  @media (max-width: 768px) {
+    .projets-img-container {
+      height: 150px; /* Hauteur plus petite sur les écrans moyens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projets-img-container {
+      height: 120px; /* Encore plus petit sur les téléphones */
+    }
+  }
+
   .col-sm-auto {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
