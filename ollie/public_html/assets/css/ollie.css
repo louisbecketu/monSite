@@ -4795,6 +4795,11 @@ input[type="button"].btn-block {
   justify-content: flex-end; /* Aligner les liens à droite */
 }
 
+.navbar-collapse.show .navbar-nav {
+  flex-direction: column; /* Aligne les liens verticalement */
+  align-items: flex-start; /* Aligne les liens à gauche */
+}
+
 .navbar-toggler {
   border: none;
   background: transparent;
