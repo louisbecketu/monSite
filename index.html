@@ -17,19 +17,29 @@
     <!-- Bootstrap + Ollie main styles -->
 	<link rel="stylesheet" href="ollie/public_html/assets/css/ollie.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <nav id="scrollspy" class="navbar navbar-light bg-light fixed-top">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">À propos de moi</a></li>
-            <li class="nav-item"><a class="nav-link" href="#formation">Formation</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
-            <li class="nav-item"><a class="nav-link" href="#qualidad">Qualités</a></li>
-            <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
-            <li class="nav-item"><a class="nav-link" href="#experiences">Expériences</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">À propos de moi</a></li>
+                <li class="nav-item"><a class="nav-link" href="#formation">Formation</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#qualidad">Qualités</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experiences">Expériences</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
 
@@ -364,6 +374,23 @@
 
     <!-- Ollie js -->
     <script src="ollie/public_html/assets/js/Ollie.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Sélectionner tous les liens de navigation dans le menu burger
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                // Trouver le conteneur collapsé
+                var collapse = document.querySelector('.navbar-collapse');
+                if (collapse.classList.contains('show')) {
+                    // Simuler un clic sur le bouton burger pour refermer le menu
+                    var toggle = document.querySelector('.navbar-toggler');
+                    toggle.click();
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

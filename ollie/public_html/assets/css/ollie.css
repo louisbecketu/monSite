@@ -2295,6 +2295,17 @@ pre code {
   }
 }
 
+@media (max-width: 992px) {
+  .navbar-nav {
+      flex-direction: column;   /* Les liens deviennent verticaux */
+      text-align: center;       /* Aligner le texte au centre */
+  }
+
+  .nav-item {
+      margin: 10px 0;           /* Espacement vertical entre les éléments */
+  }
+}
+
 @media (max-width: 1199.98px) {
   .table-responsive-xl {
     display: block;
@@ -4723,12 +4734,10 @@ input[type="button"].btn-block {
 }
 
 .navbar {
-  display: flex; /* Aligne les éléments sur une ligne */
-  justify-content: center; /* Sépare la marque et les liens */
-  align-items: center; /* Centre les éléments verticalement */
-  padding: 10px 20px; /* Espacement interne */
-  width: 100%;
-  position: relative;
+  width: 100%;                  /* Prend toute la largeur disponible */
+  padding: 10px 20px;           /* Espacement de la navbar */
+  background-color: #f8f9fa;    /* Fond clair pour la navbar */
+  z-index: 1000;                /* Pour s'assurer qu'elle reste en haut */
 }
 
 .navbar > .container,
@@ -4761,8 +4770,8 @@ input[type="button"].btn-block {
 .navbar-nav {
   display: flex; /* Aligne les liens horizontalement */
   justify-content: center;
-  margin: 0;
-  padding: 0;
+  align-items: center;          /* Centre les éléments verticalement */
+  flex-wrap: nowrap;            /* Empêche les éléments de passer à la ligne */
   list-style: none;
 }
 
@@ -11345,7 +11354,7 @@ p {
   }
 
   .nav-item {
-      margin: 0 5px; /* Réduit l'espacement entre les liens */
+      margin: 0 15px; /* Réduit l'espacement entre les liens */
   }
 }
 
