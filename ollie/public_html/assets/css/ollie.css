@@ -727,9 +727,6 @@ pre code {
 
 .projets-texts {
   color: #fff;
-  font-size: calc(0.6rem + 0.5vw); /* Ajuste la taille selon l'écran */
-  line-height: 1.4; /* Améliore la lisibilité */
-  max-height: 100%; /* Évite que le texte dépasse l'image */
 }
 
 .projets-btn {
