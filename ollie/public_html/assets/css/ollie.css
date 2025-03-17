@@ -725,7 +725,7 @@ pre code {
   max-height: 100%; /* Évite que le texte dépasse l'image */
 }
 
-.projets-text > p {
+.projets-text p {
   color: #fff;
 }
 
